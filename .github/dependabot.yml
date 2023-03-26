@@ -1,0 +1,118 @@
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "gradle"
+    directory: "/dgs"
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 10
+    reviewers:
+      - "hantsy"
+    assignees:
+      - "hantsy"
+    labels:
+      - "dependencies"
+
+  - package-ecosystem: "gradle"
+    directory: "/dgs-webflux"
+    schedule:
+      interval: weekly
+
+  - package-ecosystem: "gradle"
+    directory: "/dgs-client"
+    schedule:
+      interval: weekly
+
+  - package-ecosystem: "gradle"
+    directory: "/dgs-codegen"
+    schedule:
+      interval: weekly
+
+  - package-ecosystem: "gradle"
+    directory: "/dgs-fileupload"
+    schedule:
+      interval: weekly
+
+  - package-ecosystem: "gradle"
+    directory: "/dgs-kotlin"
+    schedule:
+      interval: weekly
+      
+  - package-ecosystem: "gradle"
+    directory: "/dgs-kotlin-co"
+    schedule:
+      interval: weekly
+      
+  - package-ecosystem: "gradle"
+    directory: "/dgs-subscription-ws"
+    schedule:
+      interval: weekly
+
+  - package-ecosystem: "gradle"
+    directory: "/dgs-subscription-sse"
+    schedule:
+      interval: weekly
+
+  - package-ecosystem: "npm"
+    directory: "/dgs-subscription-ui"
+    schedule:
+      interval: weekly
+    ignore: 
+      - dependency-name: "@angular/*"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major", "version-update:semver-minor"]    
+
+  - package-ecosystem: "gradle"
+    directory: "/graphql-spqr"
+    schedule:
+      interval: weekly
+    ignore: 
+      - dependency-name: "com.graphql-java:graphql-java"
+        update-types: ["version-update:semver-major"]  
+
+  - package-ecosystem: "gradle"
+    directory: "/graphql-java"
+    schedule:
+      interval: weekly
+  - package-ecosystem: "gradle"
+    directory: "/graphql-kotlin"
+    schedule:
+      interval: weekly      
+  - package-ecosystem: "gradle"
+    directory: "/graphql-java-kickstart-webclient"
+    schedule:
+      interval: weekly
+  - package-ecosystem: "gradle"
+    directory: "/graphql-java-kickstart"
+    schedule:
+      interval: weekly
+  - package-ecosystem: "gradle"
+    directory: "/spring-graphql-kickstart-annotations"
+    schedule:
+      interval: weekly
+
+  - package-ecosystem: "gradle"
+    directory: "/spring-graphql"
+    schedule:
+      interval: weekly
+  - package-ecosystem: "gradle"
+    directory: "/spring-graphql-querydsl"
+    schedule:
+      interval: weekly
+  - package-ecosystem: "gradle"
+    directory: "/spring-graphql-webmvc"
+    schedule:
+      interval: weekly    
+  - package-ecosystem: "gradle"
+    directory: "/spring-graphql-webflux"
+    schedule:
+      interval: weekly    
+  - package-ecosystem: "gradle"
+    directory: "/spring-graphql-rsocket-kotlin-co"
+    schedule:
+      interval: weekly    
